@@ -7,6 +7,12 @@
   <title>Task Manager</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    #alertMe{
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -88,7 +94,9 @@
     <option value="Stuck">Stuck</option>
   </select>
     </div>
-
+  <div id="alertMe" class="alert alert-danger" role="alert">
+      Please fill out all fields!
+  </div>
     <br>
  
   <button type="button" id="newTaskFormButton" class="btn-primary">Submit</button>
@@ -101,6 +109,9 @@
 <div class="card-group" id="taskList">
   
 </div> 
+<div id="alertMe" class="alert alert-danger" role="alert">
+              Please fill out all fields!
+            </div>
 <br>
   
 <div class="card-group">
