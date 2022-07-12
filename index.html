@@ -67,14 +67,13 @@
 
 
 <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Status
-        </button>  
-        <div class="dropdown-menu" id="status" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Done</a>
-            <a class="dropdown-item" href="#">Stuck</a>
-            <a class="dropdown-item" href="#">In progress</a>
-        </div>
+  <label for="status">Choose a status:</label>
+  <select name="status" id="status">
+  	<option value=" "> </option>
+    <option value="Done">Done</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Stuck">Stuck</option>
+  </select>
     </div>
 
     <br>
