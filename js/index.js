@@ -14,10 +14,11 @@ const newTaskForm = document.querySelector('#newTaskForm');
 newTaskForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const newTaskNameInput = document.querySelector('#newTaskNameInput');
-    const newTaskDescription = document.querySelector('#newTaskDescription');
-    const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
-    const newTaskDueDate = document.querySelector('#newTaskDueDate');
+    const newTaskNameInput = document.querySelector('#name');
+    const newTaskDescription = document.querySelector('#description');
+    const newTaskAssignedTo = document.querySelector('#assignedTo');
+    const newTaskDueDate = document.querySelector('#dueDate');
+    const newStatus = document.querySelector('#status');
 
     if (name.length === 0 || description.length === 0 || assignedTo.length === 0 || dueDate.length === 0){
         console.log('Please fill out all fields!');
