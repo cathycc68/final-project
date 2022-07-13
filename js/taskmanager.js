@@ -8,11 +8,13 @@ createTaskHtml = (name, description, assignedTo, dueDate, status) => {
         <p class="card-text">
         <div class="dropdown">
             ${status}
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Done</a>
-                <a class="dropdown-item" href="#">Stuck</a>
-                <a class="dropdown-item" href="#">In progress</a>
-            </div>
+            <label for="status">Choose a status:</label>
+            <select name="status" id="status">
+              <option value=" "> </option>
+              <option value="Done">Done</option>
+              <option value="ToDo">To Do</option>
+            </select>
+          </div>
         </div>
      </p>
       </p>
