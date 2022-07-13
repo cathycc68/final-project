@@ -23,3 +23,16 @@ console.log(name.length)
           newTaskVar.addTask(name, description, assignedTo, dueDate, status);
         } 
 });  
+
+let tasksList = document.querySelector('#tasksList');
+
+tasksList.addEventListener('click', (event) => { 
+  if(event.target.classList.contains('done-button')) {
+    const parentTask = event.target.parentElement;
+    const taskId = Number(paretnTask.dataset.taskId);
+    const task = newTaskVar.getTaskById(taskId);
+    task.status = 'DONE';
+    newTaskVar.render();
+  }
+
+});

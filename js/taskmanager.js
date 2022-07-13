@@ -1,8 +1,9 @@
 createTaskHtml = (name, description, assignedTo, dueDate, status) => {
     const html = `
+  <li data-task-id="${id}" class="list-group-item ">
   <div class="card" style="width: 18rem";>
      <div class="card-body">
-     <button type="button" class="btn btn-info done">Mark as Done</button>
+     <button type="button" class="btn btn-info done-button">Mark as Done</button>
       <h5 class="card-title">${name}</h5>
       <p class="card-text">${description}</p>
       <p class="card-text">
@@ -69,12 +70,21 @@ class TaskManager {
               const newDate = new Date(currentTask.dueDate);
               // due to time zones, date is ahead by one day
                const formattedDate = (newDate.getMonth() + 1) + '/' + newDate.getDate() + '/' + newDate.getFullYear();
-              var taskHtml = createTaskHtml(currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status);
+              var taskHtml = createTaskHtml(currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status, currentTask.id);
               tasksHtmlList.push(taskHtml);
               console.log(taskHtml);
               console.log(tasksHtmlList);
                 for(let i = 0; i < tasksHtmlList.length; i++);{
-              document.getElementById("taskList").innerHTML = tasksHtmlList;
+              document.getElementById("tasksList").innerHTML = tasksHtmlList;
+                }
+              }
+            }
+            getTaskById(taskId) {
+              let foundTask = taskId;
+              for(let x = 0; x < this.tasks.lenght; x++){
+                let task = this.tasks[x];
+                if (task.id ==foundTask){
+                  return task;
                 }
               }
             }
