@@ -25,6 +25,18 @@ createTaskHtml = (name, description, assignedTo, dueDate, status) => {
     </div>
   </div>
 `
+// `<li class="list-group-item">
+//         <div class="d-flex w-100 mt-2 justify-content-between align-items-center">
+//             <h5>${name}</h5>
+//             <span class="badge badge-danger">${status}</span>
+//         </div>
+//         <div class="d-flex w-100 mb-3 justify-content-between">
+//             <small>Assigned To: ${assignedTo}</small>
+//             <small>Due: ${dueDate}</small>
+//         </div>
+//         <p>${description}</p>
+//     </li>`
+
 return html;
 // //testing
 //   document.querySelector('#demo').innerHTML = html;
@@ -69,8 +81,7 @@ class TaskManager {
               }
             }
       }
-    
-        
+
         
         var newTaskVar = new TaskManager();
         
