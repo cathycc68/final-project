@@ -51,12 +51,12 @@ class TaskManager {
     }
     addTask(name, description, assignedTo, dueDate, status) {
         const task = {
-            id: this.currentId++,
-            name: document.querySelector("#name").value ,
-            description: document.querySelector("#description").value,
-            assignedTo: document.querySelector("#assignedTo").value,
-            dueDate: document.querySelector("#dueDate").value,
-            status: document.querySelector("#status").value
+            id: this.currentId++;
+            name: document.querySelector("#name").value;
+            description: document.querySelector("#description").value;
+            assignedTo: document.querySelector("#assignedTo").value;
+            dueDate: document.querySelector("#dueDate").value;
+            status: document.querySelector("#status").value;
         };
             
             this.tasks.push(task);
