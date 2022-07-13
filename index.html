@@ -61,8 +61,8 @@
         </div> -->
 
 <div class="container">
-<form>
-  <div class="form-group">
+<form id="newTaskForm">
+  <div class="form-group" >
     <label for="name">Task Name</label>
     <input type="email" class="form-control" id="name" placeholder="Enter your task">
   </div>
@@ -93,7 +93,6 @@
     <option value="ToDo">To Do</option>
   </select>
 </div>
-
     <br>
   <button type="button" id="newTaskFormButton" class="btn-primary">Submit</button>
 </form>  
@@ -106,7 +105,7 @@
   
 </div> 
 <div id="alertMe" class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Invalid Response</strong>Please fill out all fields!
+  <strong>Invalid Response</strong> Please fill out all fields!
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 <span aria-hidden="true">&times;</span>
 </div>
