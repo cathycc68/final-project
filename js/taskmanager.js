@@ -2,6 +2,7 @@ createTaskHtml = (name, description, assignedTo, dueDate, status) => {
     const html = `
   <div class="card" style="width: 18rem";>
      <div class="card-body">
+     <button type="button" class="btn btn-info done">Mark as Done</button>
       <h5 class="card-title">${name}</h5>
       <p class="card-text">${description}</p>
       <p class="card-text">
@@ -20,8 +21,6 @@ createTaskHtml = (name, description, assignedTo, dueDate, status) => {
       </p>
       <p class="card-text">Assigned to: ${assignedTo}</p>
       <p class="card-text">Due to: ${dueDate}</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      <a href="#" class="btn btn-success">Button</a>
     </div>
   </div>
 `
