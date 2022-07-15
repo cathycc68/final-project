@@ -24,6 +24,7 @@ createTaskHtml = (name, description, assignedTo, dueDate, status) => {
       <p class="card-text">Due to: ${dueDate}</p>
     </div>
   </div>
+  </li>
 `
 // `<li class="list-group-item">
 //         <div class="d-flex w-100 mt-2 justify-content-between align-items-center">
