@@ -1,6 +1,6 @@
 createTaskHtml = (name, description, assignedTo, dueDate, status) => {
     const html = `
-  <li data-task-id="${id}" class="list-group-item ">
+  <li id="${id}" class="list-group-item ">
   <div class="card" style="width: 18rem";>
      <div class="card-body">
      <button type="button" class="btn btn-info done-button">Mark as Done</button>
@@ -82,9 +82,9 @@ class TaskManager {
             }
             getTaskById(taskId) {
               let foundTask = taskId;
-              for(let x = 0; x < this.tasks.lenght; x++){
+              for(let x = 0; x < this.tasks.length; x++){
                 let task = this.tasks[x];
-                if (task.id ==foundTask){
+                if (task.id == foundTask){
                   return task;
                 }
               }
