@@ -71,7 +71,7 @@ class TaskManager {
               const newDate = new Date(currentTask.dueDate);
               // due to time zones, date is ahead by one day
                const formattedDate = (newDate.getMonth() + 1) + '/' + newDate.getDate() + '/' + newDate.getFullYear();
-              var taskHtml = createTaskHtml(currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status, currentTask.id);
+              var taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status, currentTask.id);
               tasksHtmlList.push(taskHtml);
               console.log(taskHtml);
               console.log(tasksHtmlList);
