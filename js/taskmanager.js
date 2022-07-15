@@ -109,5 +109,4 @@ class TaskManager {
           }
       };
 
-newTaskVar.load();
-newTaskVar.render();
+
