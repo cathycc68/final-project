@@ -1,5 +1,5 @@
 
-const newTaskVar = new TaskManager;
+
 
 const newTaskForm = document.querySelector('#newTaskForm');
 
@@ -21,6 +21,8 @@ console.log(name.length)
           var myAlert = document.getElementById('alertMe');
           myAlert.style.display = 'none';
           newTaskVar.addTask(name, description, assignedTo, dueDate, status);
+          newTaskVar.render();
+          newTaskVar.save();
         } 
 });  
 
@@ -28,9 +30,10 @@ let tasksList = document.querySelector('#tasksList');
 
 tasksList.addEventListener('click', (event) => { 
   if(event.target.classList.contains('done-button')) {
-    const parentTask = event.target.parentElement;
+    const parentTask = event.target.parentElement.parentElement.parentElement;
     console.log(parentTask);
     const taskId = Number(parentTask.dataset.taskId);
+    console.log(taskId);
     const task = newTaskVar.getTaskById(taskId);
     task.status = 'done';
     newTaskVar.render();

@@ -1,7 +1,7 @@
 createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
     const html = `
-  <li id= "${id}" class="list-group-item ">
-  <div class="card" style="width: 18rem";>
+  <li data-task-id= "${id}" class="list-group-item ">
+    <div class="card" style="width: 18rem";>
      <div class="card-body">
      <button type="button" class="btn btn-info done-button">Mark as Done</button>
       <h5 class="card-title">${name}</h5>
@@ -23,7 +23,7 @@ createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
       <p class="card-text">Assigned to: ${assignedTo}</p>
       <p class="card-text">Due to: ${dueDate}</p>
     </div>
-  </div>
+    </div>
   </li>
 `
 // `<li class="list-group-item">
@@ -73,18 +73,18 @@ class TaskManager {
                const formattedDate = (newDate.getMonth() + 1) + '/' + newDate.getDate() + '/' + newDate.getFullYear();
               var taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status, currentTask.id);
               tasksHtmlList.push(taskHtml);
-              console.log(taskHtml);
-              console.log(tasksHtmlList);
+              // console.log(taskHtml);
+              // console.log(tasksHtmlList);
                 for(let i = 0; i < tasksHtmlList.length; i++);{
               document.getElementById("tasksList").innerHTML = tasksHtmlList;
                 }
               }
             }
             getTaskById(taskId) {
-              let foundTask = taskId;
+              let foundTask;
               for(let x = 0; x < this.tasks.length; x++){
                 let task = this.tasks[x];
-                if (task.id == foundTask){
+                if (task.id == taskId){
                   return task;
                 }
               }
@@ -108,5 +108,9 @@ class TaskManager {
             }
           }
       };
+
+const newTaskVar = new TaskManager;
+
+newTaskVar.load();
 
 
