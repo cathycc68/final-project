@@ -112,5 +112,6 @@ class TaskManager {
 const newTaskVar = new TaskManager;
 
 newTaskVar.load();
+newTaskVar.render();
 
 
