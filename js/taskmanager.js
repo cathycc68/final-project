@@ -109,7 +109,5 @@ class TaskManager {
           }
       };
 
-var newTaskVar = new TaskManager();
-
 newTaskVar.load();
 newTaskVar.render();
