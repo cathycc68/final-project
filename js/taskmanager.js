@@ -1,6 +1,6 @@
-createTaskHtml = (name, description, assignedTo, dueDate, status) => {
+createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
     const html = `
-  <li id="${id}" class="list-group-item ">
+  <li id= "${id}" class="list-group-item ">
   <div class="card" style="width: 18rem";>
      <div class="card-body">
      <button type="button" class="btn btn-info done-button">Mark as Done</button>
@@ -50,7 +50,7 @@ class TaskManager {
         this.tasks = [];
         this.currentId = 0;
     }
-    addTask(name, description, assignedTo, dueDate, status) {
+    addTask(name, description, assignedTo, dueDate) {
         const task = {
             id: this.currentId++,
             name: name,

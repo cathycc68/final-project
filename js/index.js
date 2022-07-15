@@ -29,9 +29,9 @@ let tasksList = document.querySelector('#tasksList');
 tasksList.addEventListener('click', (event) => { 
   if(event.target.classList.contains('done-button')) {
     const parentTask = event.target.parentElement;
-    const taskId = Number(paretnTask.dataset.taskId);
+    const taskId = Number(parentTask.dataset.taskId);
     const task = newTaskVar.getTaskById(taskId);
-    task.status = 'DONE';
+    task.status = 'done';
     newTaskVar.render();
   }
 
