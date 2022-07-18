@@ -73,7 +73,13 @@ table {
     text-align: center;
 }
 
+
+
 .btn-primary{
   border: none;
   text-align: center;
+  text-decoration: solid;
+  display: inline-block;
+  padding: 15px 32px;
+  border-radius: 5px;
 }
