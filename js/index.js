@@ -30,7 +30,7 @@ let tasksList = document.querySelector('#tasksList');
 
 tasksList.addEventListener('click', (event) => { 
   if(event.target.classList.contains('done-button')) {
-    const parentTask = event.target.parentElement.parentElement.parentElement;
+    const parentTask = event.target.parentElement;
     console.log(parentTask);
     const taskId = Number(parentTask.dataset.taskId);
     console.log(taskId);
@@ -43,7 +43,7 @@ tasksList.addEventListener('click', (event) => {
 
 tasksList.addEventListener('click', (event) => { 
   if(event.target.classList.contains('delete-button')) {
-    const parentTask = event.target.parentElement.parentElement;
+    const parentTask = event.target.parentElement;
     console.log(parentTask);
     const taskId = Number(parentTask.dataset.taskId);
     console.log(taskId);

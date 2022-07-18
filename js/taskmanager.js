@@ -1,8 +1,8 @@
 createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
     const html = `
-  <li data-task-id= "${id}" class="list-group-item ">
-    <div class="card" style="width: 18rem";>
-     <div class="card-body">
+  <div class="col mb-4">
+    <div class="card" data-task-id= "${id}" >
+     <div class="card-body" >
      <button type="button" class="btn btn-info done-button">Mark as Done</button>
       <h5 class="card-title">${name}</h5>
       <p class="card-text">${description}</p>
@@ -25,7 +25,10 @@ createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
       <button type="button" class="btn btn-info delete-button">Delete</button>
     </div>
     </div>
-  </li>
+  </div>
+
+
+  
 `
 // `<li class="list-group-item">
 //         <div class="d-flex w-100 mt-2 justify-content-between align-items-center">

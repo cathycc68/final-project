@@ -22,34 +22,16 @@ time, mark, audio, video {
 	font-size: 100%;
 	font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
-	vertical-align: baseline;
   
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+body{
+  background-color:rgb(237, 227, 211); ;
 }
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 *{
   background-color: rgb(237, 227, 211);
+  box-sizing: border-box;
 }
 
 .jumbotron {
@@ -60,26 +42,47 @@ table {
   height: 50vh;
   background-repeat: no-repeat;
   background-attachment: fixed; 
+  text-align: center
 }
 
-.row h2{
+h2{
   font-family: ;
     font-size: 50px;
     font-weight: bold;
-    border-radius: 20px;
-    margin: 15px;
     position: relative;
     overflow: hidden;
     text-align: center;
 }
 
+.dueDate{
+  width: 50%;
+  height: auto;
+  float: left;
+}
 
+.dropdown{
+  width: 50%; 
+  height: auto;
+  float: right;
+  text-align: end;
+}
 
 .btn-primary{
   border: none;
   text-align: center;
   text-decoration: solid;
-  display: inline-block;
   padding: 15px 32px;
   border-radius: 5px;
+  float: right;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.container{
+  background:rgb(237, 227, 211)!important
 }
