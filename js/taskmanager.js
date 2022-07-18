@@ -22,6 +22,7 @@ createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
       </p>
       <p class="card-text">Assigned to: ${assignedTo}</p>
       <p class="card-text">Due to: ${dueDate}</p>
+      <button type="button" class="btn btn-info delete-button">Delete</button>
     </div>
     </div>
   </li>
@@ -71,7 +72,7 @@ class TaskManager {
               const newDate = new Date(currentTask.dueDate);
               // due to time zones, date is ahead by one day
                const formattedDate = (newDate.getMonth() + 1) + '/' + newDate.getDate() + '/' + newDate.getFullYear();
-              var taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status, currentTask.id);
+              var taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status);
               tasksHtmlList.push(taskHtml);
               // console.log(taskHtml);
               // console.log(tasksHtmlList);
@@ -79,9 +80,12 @@ class TaskManager {
               document.getElementById("tasksList").innerHTML = tasksHtmlList;
                 }
               }
+              const tasksHtml = tasksHtmlList.join('\n');
+              const tasksList = document.querySelector('#tasksList');
+              tasksList.innerHTML = tasksHtml;
             }
             getTaskById(taskId) {
-              let foundTask;
+              let foundTask = taskId;
               for(let x = 0; x < this.tasks.length; x++){
                 let task = this.tasks[x];
                 if (task.id == taskId){
@@ -107,6 +111,16 @@ class TaskManager {
                 this.currentId = Number(currentId);
             }
           }
+          deleteTask(taskId) {
+            let newTasks = [];
+            for (let x = 0; x < this.tasks.length; x++) {
+              let task = this.tasks[x];
+             if (task.id != taskId) {
+               newTasks.push(task);
+             }
+           }
+           this.tasks = newTasks;
+           }
       };
 
 const newTaskVar = new TaskManager;
